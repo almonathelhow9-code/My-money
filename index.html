@@ -11,8 +11,9 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="النظام المالي الذكي">
 <meta name="mobile-web-app-capable" content="yes">
-<link rel="icon" id="appFavicon" type="image/svg+xml" href="">
-<link rel="apple-touch-icon" id="appTouchIcon" href="">
+<link rel="icon" id="appFavicon" type="image/svg+xml" href="./icon.svg">
+<link rel="apple-touch-icon" id="appTouchIcon" href="./icon.svg">
+<link rel="manifest" href="./manifest.json">
 <title>النظام المالي الذكي</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -6233,7 +6234,7 @@ const App = {
         /* عند النشر على GitHub Pages: ربط manifest.json و icon.svg وتسجيل sw.js */
         if (!document.querySelector('link[rel="manifest"]')) {
           const link = document.createElement('link');
-          link.rel = 'manifest';
+          link.href = './manifest.json';
           link.href = 'manifest.json';
           document.head.appendChild(link);
         }
